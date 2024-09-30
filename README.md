@@ -342,6 +342,11 @@ Go to Jenkins and add a pipeline
 
 ![](https://miro.medium.com/v2/resize:fit:736/0*EcuT0dEzhK1ccOV0.png)
 
+Before Creating the pipeline add credentials in Jenkins of Docker,Sonarqube,Kubernetes
+
+![image](https://github.com/user-attachments/assets/5c6a3c7f-441f-47b4-82a7-eae22e718a9d)
+
+
 Lets goto our Pipeline and add below Script.
 
 ```groovy
@@ -535,7 +540,9 @@ pipeline {
 How to get the key
 
 ```yaml
-kubectl -n webapps  describe secret mysecretname```
+kubectl -n webapps  describe secret mysecretname
+
+```
 
 Now run the pipeline
 
