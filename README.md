@@ -88,11 +88,11 @@ In the realm of cloud computing, deploying a complex application with precision 
 
 
 **2\. Create a user and give the following permissions :-**
-
+We create a user account causeu using root account is not the best practice. For that, we use the user by providing a specific level of access the user to create eks .In that way, the user can have limit acess. Root have complete access which is not preferred option.
 ![image](https://github.com/user-attachments/assets/b42730d9-ab64-4869-ad8a-cc1598b46afc)
 
 
-Connect with the EC2 instance you can use ssh or Putty or mobaXterm.
+Connect with the EC2 instance 
 
 **3\. After connect install aws ctl on your server to give your credentials**  
 [https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
@@ -101,6 +101,7 @@ Connect with the EC2 instance you can use ssh or Putty or mobaXterm.
 
 **4\. After connecting install Jenkins on your server**  
 [https://www.jenkins.io/doc/book/installing/linux/#debianubuntu](https://www.jenkins.io/doc/book/installing/linux/#debianubuntu)
+
 
 **5\. Now install kubctl on the linux**  
 [https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-kubectl-binary-with-curl-on-linux](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-kubectl-binary-with-curl-on-linux)
@@ -146,7 +147,7 @@ eksctl create nodegroup --cluster=my-eks22 \
                        --nodes-max=4 \
                        --node-volume-size=20 \
                        --ssh-access \
-                       --ssh-public-key=docker \
+                       --ssh-public-key=docker "our key name" \
                        --managed \
                        --asg-access \
                        --external-dns-access \
@@ -171,6 +172,13 @@ cloudbee docker build and publish
 kubernetes
 kubernetes cli
 ```
+After installing plugins:
+
+'''bash
+sudo usermod -aG docker jenkins
+sudo systemctl restart jenkins
+'''
+![image](https://github.com/user-attachments/assets/74b35b22-e129-422c-9810-6b95ce6de0fb)
 
 **Configure Sonar Server in Manage Jenkins**
 
