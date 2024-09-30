@@ -308,7 +308,8 @@ subjects:
     name: jenkins
 ```
 
-![](https://miro.medium.com/v2/resize:fit:736/0*vrx020cTWLWNSrcE.png)
+![image](https://github.com/user-attachments/assets/85fcf356-0d5a-41de-88d8-de523f560252)
+
 
 5\. now creating a token for service account
 
@@ -321,8 +322,8 @@ metadata:
   annotations:
     kubernetes.io/service-account.name: jenkins
 ```
+![image](https://github.com/user-attachments/assets/da7b80e8-2c9a-4be2-94b4-31f546628eb6)
 
-![](https://miro.medium.com/v2/resize:fit:569/0*8T2cSyNTgW6u2oY-.png)
 
 Go to Jenkins and add a pipeline
 
