@@ -243,50 +243,51 @@ kubectl apply -f sa.yaml
 
 ```yaml
 ---
+---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
- name: app-role
- namespace: webapps
+  name: app-role
+  namespace: webapps
 rules:
- - apiGroups:
- - ""
- - apps
- - autoscaling
- - batch
- - extensions
- - policy
- - rbac.authorization.k8s.io
- resources:
- - pods
- - configmaps
- - deployments
- - daemonsets
- - componentstatuses
- - events
- - endpoints
- - horizontalpodautoscalers
- - ingress
- - jobs
- - limitranges
- - namespaces
- - nodes
- - pods
- - persistentvolumes
- - persistentvolumeclaims
- - resourcequotas
- - replicasets
- - replicationcontrollers
- - serviceaccounts
- - services
- verbs:
- - get
- - list
- - watch
- - create
- - update
- - patch
- - delete
+  - apiGroups:
+    - "" # Core API group (for pods, configmaps, etc.)
+    - apps
+    - autoscaling
+    - batch
+    - extensions
+    - policy
+    - rbac.authorization.k8s.io
+    resources:
+    - pods
+    - configmaps
+    - deployments
+    - daemonsets
+    - componentstatuses
+    - events
+    - endpoints
+    - horizontalpodautoscalers
+    - ingress
+    - jobs
+    - limitranges
+    - namespaces
+    - nodes
+    - persistentvolumes
+    - persistentvolumeclaims
+    - resourcequotas
+    - replicasets
+    - replicationcontrollers
+    - serviceaccounts
+    - services
+    verbs:
+    - get
+    - list
+    - watch
+    - create
+    - update
+    - patch
+    - delete
+
 ```
 
 ![image](https://github.com/user-attachments/assets/0feb9f87-a3e1-4a22-955a-a6cdec9b3604)
