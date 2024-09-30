@@ -535,8 +535,7 @@ pipeline {
 How to get the key
 
 ```yaml
-kubectl -n examplens describe secret mysecretname
-```
+kubectl -n webapps  describe secret mysecretname```
 
 Now run the pipeline
 
@@ -546,11 +545,6 @@ After that we run that command
 kubectl get pods -n webapps
 ```
 
-![](https://miro.medium.com/v2/resize:fit:736/0*ZQKaW4Pfn340JyXr.png)
-
-![](https://miro.medium.com/v2/resize:fit:736/1*sYrGLLwBtA9t3gSIQG9VRA.png)
-
-![](https://miro.medium.com/v2/resize:fit:736/1*HM2SUQOIjgQ-YmCCZr7mSQ.png)
 
 ![image](https://github.com/user-attachments/assets/13e8b14c-c38e-4684-a579-60d385fb04f4)
 
