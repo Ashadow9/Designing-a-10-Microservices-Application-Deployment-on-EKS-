@@ -85,16 +85,20 @@ In the realm of cloud computing, deploying a complex application with precision 
 1. **Create an AWS EC2 instance**
     
 
-![](https://miro.medium.com/v2/resize:fit:736/0*jetGaqyeE1uAXzuC.png)
+![image](https://github.com/user-attachments/assets/fbcaf36c-e714-41fb-b08d-a31aa6a288f5)
+
 
 **2\. Create a user and give the following permissions :-**
 
-![](https://miro.medium.com/v2/resize:fit:736/1*giZzF4Cn9X49DlLdCexjbg.png)
+![image](https://github.com/user-attachments/assets/b42730d9-ab64-4869-ad8a-cc1598b46afc)
+
 
 Connect with the EC2 instance you can use ssh or Putty or mobaXterm.
 
 **3\. After connect install aws ctl on your server to give your credentials**  
 [https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+![image](https://github.com/user-attachments/assets/a0c205b6-5b03-409c-88b3-7f10256fba69)
+
 
 **4\. After connecting install Jenkins on your server**  
 [https://www.jenkins.io/doc/book/installing/linux/#debianubuntu](https://www.jenkins.io/doc/book/installing/linux/#debianubuntu)
@@ -118,6 +122,7 @@ sudo newgrp docker
 ```bash
 docker run -d -p 9000:9000 sonarqube:lts-community
 ```
+![image](https://github.com/user-attachments/assets/c84efa52-21a6-4181-be9a-1684d4ee7129)
 
 **9\. Install EKS**
 
@@ -157,7 +162,7 @@ sonarqube scanner
 docker
 docker pipeline
 docker common
-cloud base docker build and publish
+cloudbee docker build and publish
 kubernetes
 kubernetes cli
 ```
@@ -166,21 +171,24 @@ kubernetes cli
 
 Grab the Public IP Address of your EC2 Instance, Sonarqube works on Port 9000 , sp &lt;Public IP&gt;:9000. Goto your Sonarqube Server. Click on Administration → Security → Users → Click on Tokens and Update Token → Give it a name → and click on Generate Token
 
-![](https://miro.medium.com/v2/resize:fit:736/0*ohY_aQ9IHj9FQ1hl.png)
+![image](https://github.com/user-attachments/assets/d4a86de6-c1a6-43b5-bf5d-3ec11c328741)
+
+
 
 Click on Update Token
 
-![](https://miro.medium.com/v2/resize:fit:736/0*0DBl74AeobYkTgyy.png)
+![image](https://github.com/user-attachments/assets/f4c675c7-d716-4159-92dd-f97bac85e4bd)
+
 
 **Copy this Token**
 
 Go to Dashboard → Manage Jenkins → Credentials → Add Secret Text. It should look like this
 
-![](https://miro.medium.com/v2/resize:fit:736/0*uVqbfa70yVgMLcFt.png)
+![image](https://github.com/user-attachments/assets/838a8aac-ce8b-40c2-96fd-644e5abab8f6)
 
 Now, goto Dashboard → Manage Jenkins → Configure System
 
-![](https://miro.medium.com/v2/resize:fit:736/0*TGpOriGYMoFi8w0j.png)
+![image](https://github.com/user-attachments/assets/42755544-95d8-43f2-bdb7-c04d77bd5290)
 
 Click on Apply and Save
 
@@ -190,7 +198,7 @@ Click on Apply and Save
 
 We will install sonar-scanner in tools.
 
-![](https://miro.medium.com/v2/resize:fit:736/0*mpd0x6wSOIxuHZ58.png)
+![image](https://github.com/user-attachments/assets/90f94feb-86f4-4597-8333-034eb8a0576d)
 
 **11\. Go to EKS service and add all traffic to its SG**
 
