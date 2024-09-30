@@ -174,10 +174,13 @@ kubernetes cli
 ```
 After installing plugins:
 
+
 '''bash
 sudo usermod -aG docker jenkins
 sudo systemctl restart jenkins
 '''
+
+
 ![image](https://github.com/user-attachments/assets/74b35b22-e129-422c-9810-6b95ce6de0fb)
 
 **Configure Sonar Server in Manage Jenkins**
