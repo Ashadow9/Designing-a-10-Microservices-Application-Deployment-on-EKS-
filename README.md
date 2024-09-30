@@ -137,21 +137,23 @@ eksctl utils associate-iam-oidc-provider \
  --cluster my-eks2 \
  --approve 
 
-eksctl create nodegroup --cluster=my-eks2 \
-   --region=ap-south-1 \
-   --name=node2 \
-   --node-type=t3.medium \
-   --nodes=3 \
-   --nodes-min=2 \
-   --nodes-max=3 \
-   --node-volume-size=20 \
-   --ssh-public-key=10-tier-key \
-   --managed \
-   --asg-access \
-   --external-dns-access \
-   --full-ecr-access \
-   --appmesh-access \
-   --alb-ingress-access
+eksctl create nodegroup --cluster=my-eks22 \
+                       --region=ap-south-1 \
+                       --name=node2 \
+                       --node-type=t3.medium \
+                       --nodes=2 \
+                       --nodes-min=2 \
+                       --nodes-max=4 \
+                       --node-volume-size=20 \
+                       --ssh-access \
+                       --ssh-public-key=docker \
+                       --managed \
+                       --asg-access \
+                       --external-dns-access \
+                       --full-ecr-access \
+                       --appmesh-access \
+                       --alb-ingress-access
+
 ```
 ![image](https://github.com/user-attachments/assets/0c3830de-84e4-4629-b503-e96c7a3ba476)
 
