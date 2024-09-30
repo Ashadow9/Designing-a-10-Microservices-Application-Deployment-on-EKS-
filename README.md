@@ -552,8 +552,17 @@ kubectl get pods -n webapps
 
 ![](https://miro.medium.com/v2/resize:fit:736/1*HM2SUQOIjgQ-YmCCZr7mSQ.png)
 
+![image](https://github.com/user-attachments/assets/13e8b14c-c38e-4684-a579-60d385fb04f4)
+
+
+![image](https://github.com/user-attachments/assets/85733eec-c93c-44a8-b31d-dde9b2619cf4)
+
+Using load balancer external ip we can see the website
+
+![image](https://github.com/user-attachments/assets/09edc396-d1ad-49a4-80e2-2a094f292079)
+
+
 **Terminate the AWS EC2 Instance**
 
 **Lastly, do not forget to terminate the AWS EC2 Instance.**
 
-### If you like this article, please share with others. ❤️
