@@ -1,6 +1,5 @@
-# Designing-a-10-Microservices-Application-Deployment-on-EKS-
+# Designing-a-10-Microservices-Application-Deployment-on-EKS
 
-# 🚀🛠️ Designing a 10-Microservices Application Deployment on EKS! 🤖
 
 ![](https://miro.medium.com/v2/resize:fit:736/1*BR95t3O5WYZykgPvJnv2HA.png)
 
@@ -154,6 +153,10 @@ eksctl create nodegroup --cluster=my-eks2 \
    --appmesh-access \
    --alb-ingress-access
 ```
+![image](https://github.com/user-attachments/assets/0c3830de-84e4-4629-b503-e96c7a3ba476)
+
+![image](https://github.com/user-attachments/assets/dad8ffa0-3281-4a3f-b313-e02cb7bbf7fc)
+
 
 Installing some pugins in Jenkins as,
 
@@ -202,7 +205,12 @@ We will install sonar-scanner in tools.
 
 **11\. Go to EKS service and add all traffic to its SG**
 
-![](https://miro.medium.com/v2/resize:fit:736/1*fCoAzi74QtB4S1c7q96OlQ.png)
+![image](https://github.com/user-attachments/assets/f79351ae-d55e-429e-99db-0432d68edbac)
+
+![image](https://github.com/user-attachments/assets/ee79466a-d6d8-4a61-a7c4-989d45ecb557)
+
+![image](https://github.com/user-attachments/assets/78a8b45b-bd6e-4fbf-914a-93dd3f903e19)
+
 
 **12\. Create a Service Account and role and Assign that role create a secret service account, and generate a token**
 
@@ -210,7 +218,9 @@ Creating Service Account
 
 1\. create namespace:-
 
-![](https://miro.medium.com/v2/resize:fit:663/1*PqFe-i3Yia1gqDD-1bZ-dg.png)
+![image](https://github.com/user-attachments/assets/4446fcb0-85b5-4020-9c1d-cb94b9288632)
+
+
 
 2\. Create sa.yml file and add the follow code
 
@@ -225,6 +235,7 @@ metadata:
 ```yaml
 kubectl apply -f sa.yaml
 ```
+![image](https://github.com/user-attachments/assets/f30ac298-878e-449b-9e7c-154ec43ef6b9)
 
 3\. Now we need to create role
 
@@ -276,7 +287,8 @@ rules:
  - delete
 ```
 
-![](https://miro.medium.com/v2/resize:fit:685/1*q3EwCbqtjT4dOpzytx1jAA.png)
+![image](https://github.com/user-attachments/assets/0feb9f87-a3e1-4a22-955a-a6cdec9b3604)
+
 
 4\. now assigning the role to the service account
 
